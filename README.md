@@ -2,6 +2,16 @@
 
 Site vitrine premium d'une agence web spécialisée dans les entreprises locales. Le projet est entièrement statique et ne nécessite ni installation, ni compilation.
 
+## Démonstrations intégrées
+
+La section **Réalisations** donne accès à trois mini-sites complets et responsive :
+
+- `demos/maison-sauge.html` — restaurant gastronomique ;
+- `demos/casa-mare.html` — hôtel boutique méditerranéen ;
+- `demos/momo-club.html` — café-brunch urbain.
+
+Ces démonstrations partagent `demos/demo.css` et `demos/demo.js`. Elles utilisent des formulaires simulés : aucune donnée n'est transmise.
+
 ## Prévisualisation locale
 
 Ouvrez directement `index.html` dans un navigateur ou servez le dossier avec un serveur statique :
@@ -32,3 +42,4 @@ Avant le premier déploiement :
 3. Poussez un commit sur `main` ou `work`, ou lancez le workflow **Deploy static site to GitHub Pages**.
 
 Le fichier `.nojekyll` empêche GitHub Pages d'appliquer un traitement Jekyll inutile. Les ressources utilisent des chemins relatifs, le site fonctionne donc également lorsque le dépôt est publié sous une URL du type `https://utilisateur.github.io/nom-du-depot/`.
+
