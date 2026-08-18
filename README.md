@@ -32,3 +32,7 @@ Avant le premier déploiement :
 3. Poussez un commit sur `main` ou `work`, ou lancez le workflow **Deploy static site to GitHub Pages**.
 
 Le fichier `.nojekyll` empêche GitHub Pages d'appliquer un traitement Jekyll inutile. Les ressources utilisent des chemins relatifs, le site fonctionne donc également lorsque le dépôt est publié sous une URL du type `https://utilisateur.github.io/nom-du-depot/`.
+
+## Illustrations
+
+Les quatre illustrations vectorielles présentes dans `assets/images/` sont des créations originales réalisées pour Studio Lumen. Elles sont intégrées au dépôt afin d'éviter toute dépendance à un service d'images externe et de garantir leur affichage sur Vercel.

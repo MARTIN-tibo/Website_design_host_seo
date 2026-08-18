@@ -25,3 +25,18 @@ document.querySelector('.quote-form').addEventListener('submit', (event) => {
   success.style.display = 'block';
   success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 });
+
+// Mouvement subtil du hero : enrichit l'expérience sans gêner la navigation.
+const hero = document.querySelector('.hero');
+const browserMockup = document.querySelector('.main-browser');
+if (hero && browserMockup && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  hero.addEventListener('pointermove', (event) => {
+    const bounds = hero.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width;
+    const y = (event.clientY - bounds.top) / bounds.height;
+    hero.style.setProperty('--spot-x', `${x * 100}%`);
+    hero.style.setProperty('--spot-y', `${y * 100}%`);
+    browserMockup.style.setProperty('--tilt-x', `${(x - 0.5) * 4}deg`);
+    browserMockup.style.setProperty('--tilt-y', `${(0.5 - y) * 4}deg`);
+  });
+}
